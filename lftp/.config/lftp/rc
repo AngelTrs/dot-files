@@ -1,0 +1,18 @@
+## some useful aliases
+alias dir ls
+alias less more
+alias zless zmore
+alias bzless bzmore
+alias reconnect "close; cache flush; cd ."
+
+# My alias
+alias seedbox-folder lcd /data/share/Downloads/seedbox
+alias pg pget -n 5
+alias mpg mirror -c --use-pget-n=5
+alias mpl mirror -c --parallel=3 
+alias mr mirror -R
+alias q queue
+
+set ssl:verify-certificate/psb42424.seedbox.io no
+set ssl:verify-certificate/bouncer.ny.us.seedbox.io no
+set ssl:verify-certificate/bouncer.to.ca.seedbox.io no
