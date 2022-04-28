@@ -1,8 +1,7 @@
 alias ls='ls --color=auto'
-alias ll='ls -alFh --color=auto --group-directories-first'
-alias lls='ls -alFhS --color=auto'
-alias llsh='lls | head -n 11'
-alias llst='lls | tail -n 12'
+alias ll='ls -AlFh --group-directories-first'
+alias lls='ls -AlFhS'
+alias llt='ls -AlFht'
 
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
