@@ -1,4 +1,5 @@
 alias ls='ls --color=auto'
+alias lsd='ls -d */'
 alias ll='ls -AlFh --group-directories-first'
 alias lls='ls -AlFhS'
 alias llt='ls -AlFht'
@@ -16,6 +17,7 @@ alias mktmp='cd $(mktemp -d)'
 
 alias ..='cd ..'
 alias ...='cd ../..'
+alias ....='cd ../../..'
 alias please='sudo $(history -p !!)'
 
 alias df='df -h'     # human-readable sizes
@@ -46,7 +48,7 @@ alias ytfl='yt-dlp -F'
 alias weather='curl wttr.in/jfk'
 
 # functions
-function mcd {
+function mkcd {
     mkdir -p $1
     cd $1
 }
