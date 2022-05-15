@@ -26,8 +26,8 @@ export HISTCONTROL=ignoreboth
 export HISTSIZE=1000
 export HISTFILESIZE=2000
 
-export EDITOR=vim
-export VISUAL=vim
+export EDITOR=nvim
+export VISUAL=nvim
 
 export BRED='\033[1;31m'
 export BYELLOW='\033[1;33m'
