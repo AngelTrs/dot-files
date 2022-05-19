@@ -1,8 +1,7 @@
-" https://github.com/junegunn/vim-plug
-
 set nocompatible
 filetype off
 
+" https://github.com/junegunn/vim-plug
 call plug#begin('~/.config/nvim/plugged')
   Plug 'sheerun/vim-polyglot'
   Plug 'preservim/nerdtree'
@@ -26,6 +25,12 @@ set shiftwidth=2            " width for autoindents
 set cc=80                   " set an 80 column border for good coding style
 set clipboard+=unnamedplus  " using system clipboard
 set mouse=a  								" Enable mouse for scrolling and window resizing.
+set breakindent             " Preseve indent on wrapped lines
+set backspace=indent,eol,start
+set hidden
+set timeoutlen=1500        " keypress timeout keypress timeout
+set laststatus=2
+set title
 
 filetype plugin indent on   "allow auto-indenting depending on file type
 
@@ -37,11 +42,30 @@ colorscheme desert
 
 noremap <Up> <Nop>                                                              
 noremap <Down> <Nop>                                                            
-noremap <Left> <Nop>                                                            
+noremap <Left> <Nop>                                                          
 noremap <Right> <Nop> 
 
 imap jj <Esc>
+imap jj <Esc>
+
 nmap H 0
 nmap L $
+nmap zz :up<cr>
+
+let mapleader=","
+
+nmap <leader>s :split<cr>
+nmap <leader>sv :vsplit<cr>
+nmap <leader>s? :map <leader>s<cr>
+
+nmap <leader>bt :enew<cr>
+nmap <leader>bd :bdelete<cr>
+nmap <leader>bn :bnext<cr>
+nmap <leader>bp :bprevious<cr>
+nmap <leader>bl :ls<cr>
+nmap <leader>b? :map <leader>b<cr>
+
+nmap <leader>rn :set relativenumber!<cr>
 
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType py setlocal ts=2 sts=4 sw=4 

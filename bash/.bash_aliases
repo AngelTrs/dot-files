@@ -19,12 +19,16 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias please='sudo $(history -p !!)'
+alias :q='exit'
 
 alias df='df -h'     # human-readable sizes
 alias free='free -m' # show sizes in MB
 
 alias histg='history | grep'
 alias journal='sudo journalctl -n 50 -u'
+
+alias ea='vim ~/.bash_aliases; source $HOME/.bash_aliases && echo "aliases sourced  --ok."'
+alias eal='vim ~/.bash_aliases_local; source $HOME/.bash_aliases_local && echo "aliases sourced  --ok."'
 
 alias sc='cd ~/shortcuts'
 
