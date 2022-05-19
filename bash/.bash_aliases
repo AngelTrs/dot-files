@@ -14,6 +14,10 @@ alias rm='rm -i'
 
 alias mkdir='mkdir -pv'
 alias mktmp='cd $(mktemp -d)'
+function mkcd {
+    mkdir -p $1
+    cd $1
+}
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -26,11 +30,12 @@ alias free='free -m' # show sizes in MB
 
 alias histg='history | grep'
 alias journal='sudo journalctl -n 50 -u'
+alias status='sudo systemctl status'
 
 alias ea='vim ~/.bash_aliases; source $HOME/.bash_aliases && echo "aliases sourced  --ok."'
 alias eal='vim ~/.bash_aliases_local; source $HOME/.bash_aliases_local && echo "aliases sourced  --ok."'
-
-alias sc='cd ~/shortcuts'
+alias erc='vim ~/.bashrc; source $HOME/.bashrc && echo "bashrc sourced  --ok."'
+alias ev='vim ~/.config/nvim/init.vim'
 
 # app specific
 alias vim='nvim'
@@ -50,9 +55,3 @@ alias ytf='yt-dlp -c -f'
 alias ytfl='yt-dlp -F'
 
 alias weather='curl wttr.in/jfk'
-
-# functions
-function mkcd {
-    mkdir -p $1
-    cd $1
-}

@@ -67,5 +67,7 @@ nmap <leader>b? :map <leader>b<cr>
 
 nmap <leader>rn :set relativenumber!<cr>
 
+nnoremap <silent> <cr> :nohlsearch<cr>
+
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType py setlocal ts=2 sts=4 sw=4 
