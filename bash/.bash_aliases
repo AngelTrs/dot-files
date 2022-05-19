@@ -37,6 +37,12 @@ alias eal='vim ~/.bash_aliases_local; source $HOME/.bash_aliases_local && echo "
 alias erc='vim ~/.bashrc; source $HOME/.bashrc && echo "bashrc sourced  --ok."'
 alias ev='vim ~/.config/nvim/init.vim'
 
+alias share='cd $SHARE'
+alias dc='cd $SHARE/documents'
+alias dl='cd $SHARE/Downloads'
+alias hb='cd $SHARE/Downloads/handbrake'
+alias md='cd $SHARE/Media'
+
 # app specific
 alias vim='nvim'
 
