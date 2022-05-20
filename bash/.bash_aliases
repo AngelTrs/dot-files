@@ -39,12 +39,16 @@ alias ev='vim ~/.config/nvim/init.vim'
 
 alias share='cd $SHARE'
 alias dc='cd $SHARE/documents'
-alias dl='cd $SHARE/Downloads'
-alias hb='cd $SHARE/Downloads/handbrake'
-alias md='cd $SHARE/Media'
+alias dl='cd $SHARE/downloads'
+alias hb='cd $SHARE/downloads/handbrake'
+alias md='cd $SHARE/media'
 
-# app specific
 alias vim='nvim'
+
+alias gs='git status'
+alias gac='git add -A && git commit -m'
+alias gp='git push'
+alias gl='git pull'
 
 alias dcu='docker-compose up -d'
 alias dcd='docker-compose down'
