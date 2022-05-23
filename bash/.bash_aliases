@@ -38,6 +38,7 @@ alias erc='vim ~/.bashrc; source $HOME/.bashrc && echo "bashrc sourced  --ok."'
 alias ev='vim ~/.config/nvim/init.vim'
 
 alias share='cd $SHARE'
+alias ad='cd $SHARE/AppData'
 alias dc='cd $SHARE/documents'
 alias dl='cd $SHARE/downloads'
 alias hb='cd $SHARE/downloads/handbrake'
