@@ -35,6 +35,7 @@ alias status='sudo systemctl status'
 alias ea='vim ~/.bash_aliases; source $HOME/.bash_aliases && echo "aliases sourced  --ok."'
 alias eal='vim ~/.bash_aliases_local; source $HOME/.bash_aliases_local && echo "aliases sourced  --ok."'
 alias erc='vim ~/.bashrc; source $HOME/.bashrc && echo "bashrc sourced  --ok."'
+alias es='vim ~/.ssh/config'
 alias ev='vim ~/.config/nvim/init.vim'
 
 alias share='cd $SHARE'
