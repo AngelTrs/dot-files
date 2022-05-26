@@ -4,13 +4,13 @@ filetype off
 " https://github.com/junegunn/vim-plug
 call plug#begin('~/.config/nvim/plugged')
   Plug 'sheerun/vim-polyglot'
-  Plug 'preservim/nerdtree'
-  Plug 'ryanoasis/vim-devicons'
   Plug 'preservim/nerdcommenter'
   Plug 'jiangmiao/auto-pairs' 
   Plug 'Yggdroot/indentLine'
   Plug 'tpope/vim-surround'
   Plug 'andymass/vim-matchup'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
 call plug#end()
 
 set autoindent              " indent a new line the same amount as prev line
@@ -42,45 +42,61 @@ endif
 
 colorscheme desert
 
+let mapleader=","
+
+" writes and exits
+imap jj <Esc>
+nmap <leader>w :w<cr>
+nmap <leader>q :q<cr>
+nmap zz :up<cr>
+
+" navigation
 noremap <Up> <Nop>                                                              
 noremap <Down> <Nop>                                                            
 noremap <Left> <Nop>                                                          
 noremap <Right> <Nop> 
-
-imap jj <Esc>
-imap jk <Esc>
-
 nmap H 0
 nmap L $
-nmap zz :up<cr>
 
-let mapleader=","
-
-" split/window actions
-nmap <leader>sh :split<cr>
-nmap <leader>sv :vsplit<cr>
-nmap <leader>s? :map <leader>s<cr>
-nmap <leader>so :only<cr>
-
-" buffer actions
-nmap <leader>bt :enew<cr>
-nmap <leader>bd :bdelete<cr>
-nmap <leader>bn :bnext<cr>
-nmap <leader>bp :bprevious<cr>
-nmap <leader>bl :ls<cr>
-nmap <leader>b? :map <leader>b<cr>
-
-nmap <leader>nt :NERDTreeToggle<cr>
+" editing
+imap ;; <esc>A;<cr>
+imap ,, <esc>A,<cr>
+nnoremap Y y$
 nmap <leader>rn :set relativenumber!<cr>
-
-" remove search highlights
 nnoremap <silent> <cr> :nohlsearch<cr>
 
-" move up, down, left, right in splits
+" splits
+nmap <leader>sh :split<cr>
+nmap <leader>sv :vsplit<cr>
+nmap <leader>so :only<cr>
+nmap <leader>s? :map <leader>s<cr>
+
+" navigating splits
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" buffer actions
+nmap <leader>bt :enew<cr> nmap <leader>bd :bdelete<cr>
+nmap <leader>bda :bufdo bdelete<cr>
+nmap <leader>bn :bnext<cr>
+nmap <leader>bp :bprevious<cr>
+nmap <leader>bl :ls<cr>
+nmap <leader>b? :map <leader>b<cr>
+
+" plugins
+nnoremap <buffer><nowait> <leader>pi <cmd>PlugInstall<cr>
+nnoremap <buffer><nowait> <leader>pu <cmd>PlugUpdate<cr>
+nnoremap <buffer><nowait> <leader>p? :map <leader>p<cr>
+
+" FZF
+nmap <leader>ff :Files<cr>
+nmap <leader>fg :GFiles<cr>
+nmap <leader>fb :Buffers<cr>
+nmap <leader>f? :map <leader>f<cr>
+
+
+" file type specifics
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType py setlocal ts=2 sts=4 sw=4 
