@@ -67,3 +67,4 @@ alias ytf='yt-dlp -c -f'
 alias ytfl='yt-dlp -F'
 
 alias weather='curl wttr.in/jfk'
+alias mip='curl ipconfig.io'

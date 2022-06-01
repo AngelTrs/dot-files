@@ -44,8 +44,7 @@ colorscheme desert
 
 let mapleader=","
 
-" writes and exits
-imap jj <Esc>
+" writes and quits
 nmap <leader>w :w<cr>
 nmap <leader>q :q<cr>
 nmap zz :up<cr>
@@ -57,12 +56,13 @@ noremap <Left> <Nop>
 noremap <Right> <Nop> 
 nmap H 0
 nmap L $
+nmap <leader>rn :set relativenumber!<cr>
 
 " editing
+imap jj <Esc>
 imap ;; <esc>A;<cr>
 imap ,, <esc>A,<cr>
 nnoremap Y y$
-nmap <leader>rn :set relativenumber!<cr>
 nnoremap <silent> <cr> :nohlsearch<cr>
 
 " splits
