@@ -13,6 +13,4 @@ alias mpl mirror -c --parallel=3
 alias mr mirror -R
 alias q queue
 
-set ssl:verify-certificate/psb42424.seedbox.io no
-set ssl:verify-certificate/bouncer.ny.us.seedbox.io no
-set ssl:verify-certificate/bouncer.to.ca.seedbox.io no
+set ssl:ca-file "/home/haloboy/.local/share/lftp/lets-encrypt-r3.pem"
