@@ -78,8 +78,9 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " buffer actions
-nmap <leader>bt :enew<cr> nmap <leader>bd :bdelete<cr>
-nmap <leader>bda :bufdo bdelete<cr>
+nmap <leader>bt :enew<cr> 
+nmap <leader>bd :bdelete<cr>
+nmap <leader>bq :bufdo bdelete<cr>
 nmap <leader>bn :bnext<cr>
 nmap <leader>bp :bprevious<cr>
 nmap <leader>bl :ls<cr>
@@ -91,7 +92,7 @@ nnoremap <buffer><nowait> <leader>pu <cmd>PlugUpdate<cr>
 nnoremap <buffer><nowait> <leader>p? :map <leader>p<cr>
 
 " FZF
-nmap <leader>ff :Files<cr>
+nmap <leader>ff :Files ..<cr>
 nmap <leader>fg :GFiles<cr>
 nmap <leader>fb :Buffers<cr>
 nmap <leader>f? :map <leader>f<cr>
