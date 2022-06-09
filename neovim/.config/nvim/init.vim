@@ -4,10 +4,11 @@ filetype off
 " https://github.com/junegunn/vim-plug
 call plug#begin('~/.config/nvim/plugged')
   Plug 'sheerun/vim-polyglot'
-  Plug 'preservim/nerdcommenter'
   Plug 'jiangmiao/auto-pairs' 
   Plug 'Yggdroot/indentLine'
+  Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-repeat'
   Plug 'andymass/vim-matchup'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
