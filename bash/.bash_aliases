@@ -46,6 +46,8 @@ alias hb='cd $SHARE/downloads/handbrake'
 alias md='cd $SHARE/media'
 
 alias vim='nvim'
+alias vf='vim $(fzf)'
+alias t='tmux attach || tmux'
 
 alias gs='git status'
 alias gac='git add -A && git commit -m'

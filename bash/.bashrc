@@ -154,3 +154,5 @@ fi
 if [ -x /usr/bin/neofetch ]; then
     neofetch
 fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
