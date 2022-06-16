@@ -1,0 +1,63 @@
+[/]
+custom-list=['custom6', 'custom8', 'custom5', 'custom4', 'custom1', '__dummy__', 'custom0', 'custom2', 'custom9', 'custom3']
+
+[custom-keybindings/custom0]
+binding=['<Alt>r']
+command='rofi -show drun -kb-cancel'
+name='rofi drun'
+
+[custom-keybindings/custom1]
+binding=['<Alt>Escape']
+command='xkill'
+name='xkill'
+
+[custom-keybindings/custom2]
+binding=['<Alt>c']
+command="rofi -show calc -modi calc -no-show-match -no-sort -calc-command \"echo -n '{result}' | gpaste-client add\""
+name='rofi calc'
+
+[custom-keybindings/custom3]
+binding=['<Alt>w']
+command='rofi -show window -window-format "{t}   -   {c}"'
+name='rofi window'
+
+[custom-keybindings/custom4]
+binding=['<Alt>s']
+command='rofi -show ssh -kb-cancel'
+name='rofi ssh'
+
+[custom-keybindings/custom5]
+binding=['<Shift><Alt>m']
+command='gnome-system-monitor'
+name='launch system monitor'
+
+[custom-keybindings/custom6]
+binding=['<Alt>f']
+command='/home/angel/bin/firefox-shortcut'
+name='firefox'
+
+[custom-keybindings/custom8]
+binding=['<Alt>p']
+command='gpaste-client ui'
+name='gpaste ui'
+
+[custom-keybindings/custom9]
+binding=@as []
+command="sh -c 'XAPP_FORCE_GTKWINDOW_ICON=web-google-keep firefox --class WebApp-Keep0154 --profile ~/.local/share/ice/firefox/Keep0154 --no-remote https://keep.google.com/u/0/'"
+name='launch keep webapp'
+
+[media-keys]
+logout=['<Control><Alt>Delete']
+shutdown=['<Control><Alt>End', 'XF86PowerOff']
+suspend=['XF86Sleep', '<Shift><Alt>q']
+terminal=['<Primary><Alt>t', '<Alt>Return']
+
+[wm]
+close=['<Alt>F4', '<Alt>d']
+minimize=['<Shift><Alt>Down', '<Super>j']
+switch-group=@as []
+switch-to-workspace-left=['<Control><Alt>Left', '<Alt>Left']
+switch-to-workspace-right=['<Control><Alt>Right', '<Alt>Right']
+switch-windows=['<Alt>Tab']
+switch-windows-backward=['<Primary><Alt>Tab']
+unmaximize=['<Alt>F5']
