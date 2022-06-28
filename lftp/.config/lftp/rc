@@ -6,7 +6,7 @@ alias bzless bzmore
 alias reconnect "close; cache flush; cd ."
 
 # My alias
-alias seedbox-folder lcd /data/share/downloads/seedbox
+alias seedbox-folder lcd /data/files/downloads/seedbox
 alias pg pget -n 5
 alias mpg mirror -c --use-pget-n=5
 alias mpl mirror -c --parallel=3 
