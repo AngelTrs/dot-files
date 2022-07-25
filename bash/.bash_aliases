@@ -26,7 +26,7 @@ alias please='sudo $(history -p !!)'
 alias :q='exit'
 
 alias df='df -h'     # human-readable sizes
-alias free='free -m' # show sizes in MB
+alias free='free -mh' # show sizes in MB
 
 alias histg='history | grep'
 alias journal='sudo journalctl -n 50 -u'
