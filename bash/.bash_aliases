@@ -1,4 +1,4 @@
-alias ls='ls --color=auto'
+alias ls='ls -l --color=auto'
 alias lsd='ls -d */'
 alias ll='ls -AlFh --group-directories-first'
 alias lls='ls -AlFhS'
