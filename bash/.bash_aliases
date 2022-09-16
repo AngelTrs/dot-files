@@ -1,6 +1,7 @@
 alias ls='ls -l --color=auto'
 alias lsd='ls -d */'
 alias ll='ls -AlFh --group-directories-first'
+alias llc='clear && ls -AlFh --group-directories-first'
 alias lls='ls -AlFhS'
 alias llt='ls -AlFht'
 
