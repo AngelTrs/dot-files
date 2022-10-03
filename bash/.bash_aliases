@@ -42,7 +42,6 @@ alias ev='vim ~/.config/nvim/init.vim'
 alias ad='cd $NFILES/AppData'
 alias dc='cd $NFILES/documents'
 alias dl='cd $NFILES/downloads'
-alias hb='cd $NFILES/downloads/handbrake'
 alias md='cd $NMEDIA'
 
 alias vim='nvim'
