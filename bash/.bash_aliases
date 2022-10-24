@@ -41,8 +41,8 @@ alias ev='vim ~/.config/nvim/init.vim'
 
 alias ad='cd $NFILES/AppData'
 alias dc='cd $NFILES/documents'
-alias dl='cd $NFILES/downloads'
 alias md='cd $NMEDIA'
+alias dl='cd $NMEDIA/downloads'
 
 alias vim='nvim'
 alias vf='vim $(fzf)'
