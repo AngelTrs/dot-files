@@ -12,6 +12,9 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'andymass/vim-matchup'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
+  Plug 'junegunn/fzf.vim'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 set autoindent              " indent a new line the same amount as prev line
@@ -42,6 +45,9 @@ if (has("termguicolors"))
 endif
 
 colorscheme desert
+
+let g:airline_theme='fruit_punch'
+let g:airline#extensions#tabline#enabled = 1
 
 let mapleader=","
 
