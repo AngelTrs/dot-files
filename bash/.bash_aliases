@@ -11,7 +11,7 @@ alias fgrep='fgrep --color=auto'
 
 alias cp="cp -iv"
 alias mv='mv -iv'
-alias rm='rm -i'
+alias rm='rm -ir'
 
 alias mkdir='mkdir -pv'
 alias mktmp='cd $(mktemp -d)'
