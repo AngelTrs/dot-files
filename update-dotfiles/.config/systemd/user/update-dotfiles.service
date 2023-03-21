@@ -1,0 +1,6 @@
+[Unit]
+Description="update dotfiles"
+
+[Service]
+Type=oneshot
+ExecStart=%h/bin/update-dotfiles.sh
