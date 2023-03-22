@@ -1,5 +1,7 @@
 [Unit]
 Description="update dotfiles"
+After=network-online.target
+Wants=network-online.target
 
 [Service]
 Type=oneshot
