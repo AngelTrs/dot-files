@@ -29,22 +29,18 @@ alias :q='exit'
 alias df='df -h'     # human-readable sizes
 alias free='free -mh' # show sizes in MB
 
-alias histg='history | grep'
+alias histgrep='history | grep'
 alias journal='sudo journalctl -n 50 -u'
 alias status='sudo systemctl status'
 
 alias ea='vim ~/.bash_aliases; source $HOME/.bash_aliases && echo "aliases sourced  --ok."'
 alias eal='vim ~/.bash_aliases_local; source $HOME/.bash_aliases_local && echo "aliases sourced  --ok."'
 alias erc='vim ~/.bashrc; source $HOME/.bashrc && echo "bashrc sourced  --ok."'
-alias es='vim ~/.ssh/config'
-alias ev='vim ~/.config/nvim/init.vim'
-
-alias ad='cd $NFILES/AppData'
-alias dc='cd $NFILES/documents'
-alias md='cd $NMEDIA'
-alias dl='cd $NMEDIA/downloads'
+alias essh='vim ~/.ssh/config'
+alias evim='vim ~/.config/nvim/init.vim'
 
 alias vim='nvim'
+alias v='nvim'
 alias vf='vim $(fzf)'
 alias t='tmux attach || tmux'
 
@@ -68,4 +64,10 @@ alias ytf='yt-dlp -c -f'
 alias ytfl='yt-dlp -F'
 
 alias weather='curl wttr.in/jfk'
-alias mip='curl ipconfig.io'
+alias myip='curl ipconfig.io'
+
+alias ad='cd $NFILES/app-data'
+alias dc='cd $NFILES/documents'
+alias fl='cd $NFILES'
+alias md='cd $NMEDIA'
+alias dl='cd $NMEDIA/downloads'
