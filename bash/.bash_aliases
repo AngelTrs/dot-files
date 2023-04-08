@@ -4,6 +4,8 @@ alias ll='ls -AlFh --group-directories-first'
 alias llc='clear && ls -AlFh --group-directories-first'
 alias lls='ls -AlFhS'
 alias llt='ls -AlFht'
+alias lt='tree'
+alias tt='tree -a'
 
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
@@ -40,8 +42,10 @@ alias essh='vim ~/.ssh/config'
 alias evim='vim ~/.config/nvim/init.vim'
 
 alias vim='nvim'
+alias svim='sudoedit'
 alias v='nvim'
 alias vf='vim $(fzf)'
+alias view='vim -R'
 alias t='tmux attach || tmux'
 
 alias gs='git status'
@@ -66,6 +70,7 @@ alias ytfl='yt-dlp -F'
 alias weather='curl wttr.in/jfk'
 alias myip='curl ipconfig.io'
 
+# locations
 alias ad='cd $NFILES/app-data'
 alias dc='cd $NFILES/documents'
 alias fl='cd $NFILES'
