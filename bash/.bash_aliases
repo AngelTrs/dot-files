@@ -71,7 +71,7 @@ alias weather='curl wttr.in/jfk'
 alias myip='curl ipconfig.io'
 
 # locations
-alias ad='cd $NFILES/app-data'
+alias ad='cd $DOCKER_APP_DATA'
 alias dc='cd $NFILES/documents'
 alias fl='cd $NFILES'
 alias md='cd $NMEDIA'
