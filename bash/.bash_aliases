@@ -6,6 +6,7 @@ alias lls='ls -AlFhS'
 alias llt='ls -AlFht'
 alias lt='tree'
 alias tt='tree -a'
+alias td='tree -dL 1'
 
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
