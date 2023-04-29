@@ -43,6 +43,7 @@ alias essh='vim ~/.ssh/config'
 alias evim='vim ~/.config/nvim/init.vim'
 
 alias vim='nvim'
+alias vimdiff='nvim -d'
 alias svim='sudoedit'
 alias v='nvim'
 alias vf='vim $(fzf)'

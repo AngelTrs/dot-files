@@ -1,0 +1,5 @@
+sequence dotted {
+	safe {filename "/home/angel/.config/detox/mysafe.tbl";};
+	lower;
+	wipeup;
+};
