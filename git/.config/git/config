@@ -1,0 +1,14 @@
+# This is Git's per-user configuration file.
+[user]
+name = AngelTrs
+email = "{ID}+{username}@users.noreply.github.com"
+
+[core]
+editor = nvim
+
+[init]
+defaultBranch = main
+[push]
+	default = matching
+[status]
+	showuntrackedfiles = all
