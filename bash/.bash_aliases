@@ -50,7 +50,6 @@ alias view='vim -R'
 alias t='tmux attach || tmux'
 
 alias gs='git status'
-alias gac='git add -A && git commit -m'
 alias gp='git push'
 alias gl='git pull'
 

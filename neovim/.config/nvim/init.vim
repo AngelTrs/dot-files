@@ -51,26 +51,31 @@ let g:airline#extensions#tabline#enabled = 1
 
 let mapleader=","
 
+" init.vim
+nmap <leader>rc :vsplit $MYVIMRC<cr>
+nmap <leader>src :source $MYVIMRC<cr>
+
 " writes and quits
 nmap <leader>w :w<cr>
 nmap <leader>q :q<cr>
 nmap zz :up<cr>
 
 " navigation
-noremap <Up> <Nop>                                                              
-noremap <Down> <Nop>                                                            
-noremap <Left> <Nop>                                                          
-noremap <Right> <Nop> 
+map <Up> <Nop>                                                              
+map <Down> <Nop>                                                            
+map <Left> <Nop>                                                          
+map <Right> <Nop> 
 nmap H 0
 nmap L $
 nmap <leader>rn :set relativenumber!<cr>
 
 " editing
 imap jj <Esc>
-imap ;; <esc>A;<cr>
+imap ;; <esc>A;<esc>
 imap ,, <esc>A,<cr>
-nnoremap Y y$
-nnoremap <silent> <cr> :nohlsearch<cr>
+nmap <leader>;; A;<esc>
+nmap Y y$
+nmap <silent> <cr> :nohlsearch<cr>
 
 " splits
 nmap <leader>sh :split<cr>
@@ -79,10 +84,10 @@ nmap <leader>so :only<cr>
 nmap <leader>s? :map <leader>s<cr>
 
 " navigating splits
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nmap <C-J> <C-W><C-J>
+nmap <C-K> <C-W><C-K>
+nmap <C-L> <C-W><C-L>
+nmap <C-H> <C-W><C-H>
 
 " buffer actions
 nmap <leader>bt :enew<cr> 
