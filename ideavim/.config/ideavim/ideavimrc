@@ -1,0 +1,26 @@
+" writes and quits
+nmap <leader>w :w<cr>
+nmap <leader>q :q<cr>
+nmap zz :w<cr>
+
+" navigation
+map <Up> <Nop>
+map <Down> <Nop>
+map <Left> <Nop>
+map <Right> <Nop> 
+nmap H 0
+nmap L $
+nmap <leader>rn :set relativenumber!<cr>
+vmap vv <Esc>
+
+" editing
+imap jj <Esc>
+nmap <leader>;; A;<esc>
+nmap Y y$
+nmap <silent> <cr> :nohlsearch<cr>
+
+" splits
+nmap <leader>sh :split<cr>
+nmap <leader>sv :vsplit<cr>
+nmap <leader>so :only<cr>
+nmap <leader>s? :map <leader>s<cr>
