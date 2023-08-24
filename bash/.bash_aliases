@@ -29,6 +29,7 @@ alias please='sudo $(history -p !!)'
 alias :q='exit'
 
 alias df='df -h'     # human-readable sizes
+alias du='du -hs *'
 alias free='free -mh' # show sizes in MB
 
 alias histgrep='history | grep'
