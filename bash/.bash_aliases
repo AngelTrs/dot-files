@@ -21,6 +21,7 @@ function mkcd {
     mkdir -p $1
     cd $1
 }
+alias rcp='rsync -avhW --no-compress --progress'
 
 alias ..='cd ..'
 alias ...='cd ../..'
