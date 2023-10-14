@@ -59,6 +59,7 @@ nmap <leader>src :source $MYVIMRC<cr>
 nmap <leader>w :w<cr>
 nmap <leader>q :q<cr>
 nmap zz :up<cr>
+nmap CQ :cq<cr>
 
 " navigation
 map <Up> <Nop>                                                              
