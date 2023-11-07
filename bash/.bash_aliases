@@ -22,6 +22,9 @@ function mkcd {
     cd $1
 }
 alias rcp='rsync -avhW --no-compress --progress'
+function bak {
+    cp $1 $1.bak
+}
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -49,7 +52,7 @@ alias svim='sudoedit'
 alias v='nvim'
 alias vf='vim $(fzf)'
 alias view='vim -R'
-alias t='tmux attach || tmux'
+alias t='tmux attach || tmux new'
 
 alias gs='git status'
 alias gp='git push'
