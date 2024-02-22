@@ -1,5 +1,5 @@
 configuration {
-  modi: [window,run,ssh,calc];
+  modi: [window,ssh,calc,drun];
 }
 
 @theme "Arc-Dark"

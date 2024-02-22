@@ -7,9 +7,9 @@ alias llt='ll -t'
 alias tt='tree -a'
 alias td='tree -dL 2'
 
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto -i'
+alias egrep='egrep --color=auto -i'
+alias fgrep='fgrep --color=auto -i'
 
 alias cp="cp -iv"
 alias mv='mv -iv'
