@@ -151,11 +151,6 @@ fi
 
 
 # My additions
-if [ -x /usr/bin/neofetch ]; then
-    neofetch
-fi
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-[ -f ~/.bashrc_local ] && source ~/.bashrc_local
 
 [[ -e "/home/svcadmin/lib/oracle-cli/lib/python3.7/site-packages/oci_cli/bin/oci_autocomplete.sh" ]] && source "/home/svcadmin/lib/oracle-cli/lib/python3.7/site-packages/oci_cli/bin/oci_autocomplete.sh"
