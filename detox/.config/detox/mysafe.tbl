@@ -89,7 +89,6 @@ start
 0x2e		.
 0x3d		=
 0x5e		^
-0x5f		_
 0x7e		~
 
 #
@@ -99,7 +98,6 @@ start
 0x09		.	# tab
 0x0A		.	# new line
 0x0D		.	# carriage return
-0x20	  .	# space
 0x21		.	# !
 0x22		.	# "
 0x24		.	# $
@@ -128,9 +126,11 @@ start
 0x7d		-	# }
 
 #
-# Other
+# My Customs
 #
 
-0x26		_and_	# &
+0x5f		- # underscore
+0x20	  -	# space
+0x26		-and-	# &
 
 end

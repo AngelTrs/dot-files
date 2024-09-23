@@ -85,5 +85,8 @@ fi
 source "$XDG_CONFIG_HOME/zsh/plugins/fzf/key-bindings.zsh"
 source "$XDG_CONFIG_HOME/zsh/plugins/fzf/completion.zsh"
 source "$XDG_CONFIG_HOME/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
-bindkey  '^L' autosuggest-accept
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# bindkey  '^L' autosuggest-accept
+bindkey '^I'   complete-word       # tab          | complete
+bindkey '^[[Z' autosuggest-accept  # shift + tab  | autosuggest
+source "$XDG_CONFIG_HOME/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "$XDG_CONFIG_HOME/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"

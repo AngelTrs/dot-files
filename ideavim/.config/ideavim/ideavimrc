@@ -1,3 +1,5 @@
+let mapleader=","
+
 " writes and quits
 nmap <leader>w :w<cr>
 nmap <leader>q :q<cr>
@@ -11,7 +13,6 @@ map <Right> <Nop>
 nmap H 0
 nmap L $
 nmap <leader>rn :set relativenumber!<cr>
-vmap vv <Esc>
 
 " editing
 imap jj <Esc>
