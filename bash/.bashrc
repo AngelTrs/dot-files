@@ -151,3 +151,7 @@ if ! shopt -oq posix; then
 fi
 
 neofetch
+
+if [ -n "$STY" ]; then
+  PS1="\e[0;32m(screen)\e[0m $PS1"
+fi
