@@ -46,7 +46,10 @@ setopt HIST_VERIFY               # Do not execute immediately upon history expan
 # VIM
 # ------
 bindkey -v
-export KEYTIMEOUT=1
+export KEYTIMEOUT=20
+bindkey -M viins 'jj' vi-cmd-mode
+bindkey -M vicmd 'H' beginning-of-line
+bindkey -M vicmd 'L' end-of-line
 
 # custom function for cursor depending on vim mode
 source "$XDG_CONFIG_HOME/zsh/cursor_mode"
@@ -79,6 +82,13 @@ if [ -f ~/.bash_aliases_local ]; then
     source ~/.bash_aliases_local
 fi
 
+#--------------
+# FUNCTIONS   -
+#--------------
+
+autoload -U zmv
+alias zmv='noglob zmv'
+
 # ------
 # PLUGINS
 # ------
@@ -90,3 +100,4 @@ bindkey '^I'   complete-word       # tab          | complete
 bindkey '^[[Z' autosuggest-accept  # shift + tab  | autosuggest
 source "$XDG_CONFIG_HOME/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$XDG_CONFIG_HOME/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
