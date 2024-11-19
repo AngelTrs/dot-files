@@ -7,6 +7,12 @@ alias llt='ll -t'
 alias tt='tree -a'
 alias td='tree -dL 2'
 
+alias ll='exa --long --all --group-directories-first'
+alias llt='ll --sort newest'
+alias lls='ll --sort size'
+
+alias cat='batcat'
+
 alias grep='grep --color=auto -i'
 alias egrep='egrep --color=auto -i'
 alias fgrep='fgrep --color=auto -i'
