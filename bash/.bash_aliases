@@ -77,10 +77,6 @@ function dcupd {
     yes | docker image prune
 }
 
-alias yt='yt-dlp -c'
-alias ytf='yt-dlp -c -f'
-alias ytfl='yt-dlp -F'
-
 alias weather='curl wttr.in/jfk'
 alias myip='curl ipconfig.io'
 
@@ -91,4 +87,4 @@ alias fl='cd $NFILES'
 alias md='cd $NMEDIA'
 alias dl='cd $NDOWNLOADS'
 
-alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
+alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'
