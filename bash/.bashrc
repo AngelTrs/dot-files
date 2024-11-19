@@ -26,8 +26,8 @@ export HISTCONTROL=ignoreboth
 export HISTSIZE=1000
 export HISTFILESIZE=2000
 
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR=vim
+export VISUAL=vim
 
 export BRED='\033[1;31m'
 export BYELLOW='\033[1;33m'
@@ -138,6 +138,7 @@ if [ -f ~/.bash_aliases_local ]; then
     . ~/.bash_aliases_local
 fi
 
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -148,9 +149,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-
-# My additions
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-[[ -e "/home/svcadmin/lib/oracle-cli/lib/python3.7/site-packages/oci_cli/bin/oci_autocomplete.sh" ]] && source "/home/svcadmin/lib/oracle-cli/lib/python3.7/site-packages/oci_cli/bin/oci_autocomplete.sh"
