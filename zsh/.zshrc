@@ -70,6 +70,12 @@ bindkey -M visual S add-surround
 # ------
 source "$XDG_CONFIG_HOME/zsh/completion.zsh"
 
+# ------
+# EXPORTS
+# ------
+if [ -f ~/.bash_exports_local ]; then
+    source ~/.bash_exports_local
+fi
 
 # ------
 # ALIASES

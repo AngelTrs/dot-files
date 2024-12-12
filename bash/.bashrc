@@ -8,7 +8,6 @@ case $- in
       *) return;;
 esac
 
-
 #   Options
 shopt -s histappend
 shopt -s checkwinsize
@@ -20,43 +19,22 @@ shopt -s extglob
 shopt -s hostcomplete
 shopt -s nocaseglob
 
-
 #   Enviroment Variables
 export HISTCONTROL=ignoreboth
 export HISTSIZE=1000
 export HISTFILESIZE=2000
 
+# editor
 export EDITOR=vim
 export VISUAL=vim
+
+# Man pages
+export MANPAGER='vim +Man!'
 
 export BRED='\033[1;31m'
 export BYELLOW='\033[1;33m'
 export BCYAN='\033[1;36m'
 export RESET='\033[m'
-
-# basedir defaults, in case they're not already set up.
-# http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html
-if [[ -z "$XDG_DATA_HOME" ]]; then
-	export XDG_DATA_HOME="$HOME/.local/share"
-fi
-
-if [[ -z "$XDG_CONFIG_HOME" ]]; then
-	export XDG_CONFIG_HOME="$HOME/.config"
-fi
-
-if [[ -z "$XDG_CACHE_HOME" ]]; then
-	export XDG_CACHE_HOME="$HOME/.cache"
-fi
-
-if [[ -z "$XDG_DATA_DIRS" ]]; then
-	export XDG_DATA_DIRS="/usr/local/share:/usr/share"
-fi
-
-if [[ -z "$XDG_CONFIG_DIRS" ]]; then
-	export XDG_CONFIG_DIRS="/etc/xdg"
-else
-	export XDG_CONFIG_DIRS="/etc/xdg:$XDG_CONFIG_DIRS"
-fi
 
 
 # make less more friendly for non-text input files, see lesspipe(1)
@@ -99,6 +77,10 @@ xterm*|rxvt*)
     ;;
 esac
 
+# change prompt for screen sessions
+if [ -n "$STY" ]; then
+  PS1="\e[0;32m(screen)\e[0m $PS1"
+fi
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -112,7 +94,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-
 man() {
     LESS_TERMCAP_md=$'\e[01;31m' \
     LESS_TERMCAP_me=$'\e[0m' \
@@ -123,11 +104,9 @@ man() {
     command man "$@"
 }
 
-
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
 
 #   Aliases
 if [ -f ~/.bash_aliases ]; then
@@ -137,7 +116,6 @@ fi
 if [ -f ~/.bash_aliases_local ]; then
     . ~/.bash_aliases_local
 fi
-
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -150,8 +128,32 @@ if ! shopt -oq posix; then
   fi
 fi
 
-neofetch
+# fzf
+export FZF_DEFAULT_COMMAND='find . -type f ! -path "*git*"'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-if [ -n "$STY" ]; then
-  PS1="\e[0;32m(screen)\e[0m $PS1"
-fi
+FZF_COLORS="bg+:-1,\
+fg:gray,\
+fg+:white,\
+border:black,\
+spinner:0,\
+hl:yellow,\
+header:blue,\
+info:green,\
+pointer:red,\
+marker:blue,\
+prompt:gray,\
+hl+:red"
+
+export FZF_DEFAULT_OPTS="--height 60% \
+--border sharp \
+--layout reverse \
+--color '$FZF_COLORS' \
+--prompt '∷ ' \
+--pointer ▶ \
+--marker ⇒"
+
+export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -n 10'"
+export FZF_COMPLETION_DIR_COMMANDS="cd pushd rmdir tree ls"
+
+[ -f ~/.bash_exports_local ] && source ~/.bash_exports_local
