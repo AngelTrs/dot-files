@@ -1,30 +1,14 @@
 set nocompatible
 filetype off
 
-" https://github.com/junegunn/vim-plug
-call plug#begin('~/.config/nvim/plugged')
-  Plug 'sheerun/vim-polyglot'
-  Plug 'jiangmiao/auto-pairs' 
-  Plug 'Yggdroot/indentLine'
-  Plug 'tpope/vim-commentary'
-  Plug 'tpope/vim-surround'
-  Plug 'tpope/vim-repeat'
-  Plug 'andymass/vim-matchup'
-  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  Plug 'junegunn/fzf.vim'
-  Plug 'junegunn/fzf.vim'
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
-call plug#end()
-
 set autoindent              " indent a new line the same amount as prev line
 set number									" show line numbers
 set ignorecase              " case insensitive
 set smartcase								" Don't ignore case when search has capital letter
 set showmatch               " show matching 
 set hlsearch                " highlight search 
-set expandtab               " tabs expanded to spaces
 set tabstop=2               " number of columns occupied by a tab 
+set expandtab               " expand tabs to spaces
 set softtabstop=2						" see multiple spaces as tabstops so <BS> 
 set shiftwidth=2            " width for autoindents
 set cc=80                   " set an 80 column border for good coding style
@@ -46,9 +30,6 @@ if (has("termguicolors"))
 endif
 
 colorscheme desert
-
-let g:airline_theme='fruit_punch'
-let g:airline#extensions#tabline#enabled = 1
 
 let mapleader=","
 
