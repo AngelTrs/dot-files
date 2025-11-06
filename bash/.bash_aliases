@@ -4,6 +4,7 @@ alias ll='ls -lh --group-directories-first'
 alias llc='clear && ll'
 alias lls='ll -S'
 alias llt='ll -t'
+alias llh='ll | head'
 
 alias grep='grep --color=auto -i'
 alias egrep='egrep --color=auto -i'
@@ -48,7 +49,7 @@ alias evim='vim ~/.config/nvim/init.vim'
 
 alias vim='nvim'
 alias vimdiff='nvim -d'
-alias vimfzf='vim $(fzf)'
+alias fvim='vim $(fzf)'
 alias view='vim -R'
 
 # exa replacement for ls

@@ -2,6 +2,18 @@
 
 fpath=($XDG_CONFIG_HOME/zsh/plugins $fpath)
 
+# editor
+export EDITOR=vim
+export VISUAL=vim
+
+# Man pages
+export MANPAGER='vim +Man!'
+
+export BRED='\033[1;31m'
+export BYELLOW='\033[1;33m'
+export BCYAN='\033[1;36m'
+export RESET='\033[m'
+
 # ------
 # PROMPT
 # ------
