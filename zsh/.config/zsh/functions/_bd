@@ -1,0 +1,18 @@
+#compdef bd
+
+_bd() {
+  local -a segments parents
+  segments=(${(s:/:)PWD})
+  
+  # Generate parent folder names in reverse order
+  integer i
+  for (( i=${#segments}; i>=1; i-- )); do
+    parents+=("${segments[$i]}")
+  done
+  parents+=("/")
+
+  # -V 'directories' creates an unsorted group (matches your old -V)
+  _describe -V 'directories' 'parent directory' parents
+}
+
+_bd "$@"

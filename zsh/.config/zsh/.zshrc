@@ -1,13 +1,22 @@
 #!/usr/bin/env zsh
 
-fpath=($XDG_CONFIG_HOME/zsh/plugins $fpath)
+# PATH
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+fpath=($XDG_CONFIG_HOME/zsh/functions $fpath)
 
 # editor
 export EDITOR=vim
 export VISUAL=vim
 
 # Man pages
-export MANPAGER='vim +Man!'
+export MANPAGER='nvim +Man! -'
 
 export BRED='\033[1;31m'
 export BYELLOW='\033[1;33m'
@@ -21,7 +30,7 @@ export RESET='\033[m'
 # promptinit
 # prompt redhat
 setopt PROMPT_SUBST
-PROMPT="%B%F{yellow}%n%f%F{cyan}@%m %b%f%~%B%F{cyan}:%f%b "
+PROMPT='%B%F{yellow}%n%f%F{cyan}@%m %b%f%~%B%F{cyan}:%f%b '
 
 
 # ------
@@ -33,9 +42,7 @@ setopt PUSHD_SILENT         # Do not print the directory stack after pushd or po
 
 setopt CORRECT              # Spelling correction
 setopt CDABLE_VARS          # Change directory to a path stored in a variable.
-# setopt EXTENDED_GLOB        # Use extended globbing syntax.
-
-source "$XDG_CONFIG_HOME/zsh/bd"
+# setopt EXTENDED_GLOB      # Use extended globbing syntax.
 
 
 # ------
@@ -43,7 +50,7 @@ source "$XDG_CONFIG_HOME/zsh/bd"
 # ------
 export HISTSIZE=10000
 export SAVEHIST=10000
-export HISTFILE=~/.zsh_history
+export HISTFILE=$XDG_CONFIG_HOME/zsh/.zsh_history
 
 setopt SHARE_HISTORY             # Share history between all sessions.
 setopt HIST_EXPIRE_DUPS_FIRST    # Expire a duplicate event first when trimming history.
@@ -62,9 +69,6 @@ export KEYTIMEOUT=20
 bindkey -M viins 'jj' vi-cmd-mode
 bindkey -M vicmd 'H' beginning-of-line
 bindkey -M vicmd 'L' end-of-line
-
-# custom function for cursor depending on vim mode
-source "$XDG_CONFIG_HOME/zsh/cursor_mode"
 
 # Emulation of vim-surround
 autoload -Uz surround
@@ -107,15 +111,16 @@ fi
 autoload -U zmv
 alias zmv='noglob zmv'
 
+autoload -Uz bd
+
 # ------
 # PLUGINS
 # ------
+source "$XDG_CONFIG_HOME/zsh/plugins/zsh-vi-mode/zsh-vi-mode.zsh"
 source "$XDG_CONFIG_HOME/zsh/plugins/fzf/key-bindings.zsh"
 source "$XDG_CONFIG_HOME/zsh/plugins/fzf/completion.zsh"
 source "$XDG_CONFIG_HOME/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 # bindkey  '^L' autosuggest-accept
 bindkey '^I'   complete-word       # tab          | complete
 bindkey '^[[Z' autosuggest-accept  # shift + tab  | autosuggest
-source "$XDG_CONFIG_HOME/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$XDG_CONFIG_HOME/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-

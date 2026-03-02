@@ -1,0 +1,47 @@
+# autoload
+
+# my version of:
+# https://github.com/Phantas0s/.dotfiles/blob/master/zsh/plugins/bd.zsh
+
+
+bd() {
+  (($# < 1)) && {
+    print -- "usage: $0 <name-of-any-parent-directory>"
+    print -- "       $0 <number-of-folders>"
+    return 1
+  } >&2
+
+  local -a segments
+  segments=(${(s:/:)PWD})
+  local num_folders=${#segments}
+  local dest="./"
+
+  # 1. Handle numeric input
+  if [[ "$1" = <-> ]]; then
+    if [[ $1 -gt $num_folders ]]; then
+      print -- "bd: Error: Can not go up $1 times"
+      return 1
+    fi
+    cd ${(j:/:)segments[1,-$1-1]}/
+    return 0
+  fi
+
+  # 2. Handle string matching (Parent Directory Name)
+  local i
+  for (( i=$num_folders; i>=1; i-- )); do
+    dest+="../"
+    if [[ "$1" == "${segments[$i]}" ]]; then
+      cd $dest
+      return 0
+    fi
+  done
+
+  # 3. Handle Root specifically
+  if [[ "$1" == "/" ]]; then
+    cd /
+    return 0
+  fi
+
+  print -- "bd: Error: No parent directory named '$1'"
+  return 1
+}
