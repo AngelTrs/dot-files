@@ -1,9 +1,0 @@
-[Unit]
-
-[Timer]
-OnCalendar=daily
-Persistent=true
-Unit=update-dotfiles.service
-
-[Install]
-WantedBy=timers.target
