@@ -44,7 +44,7 @@ alias free='free -mh'
 alias ea='vim $HOME/.bash_aliases; source $HOME/.bash_aliases && echo "bash_aliases sourced  --ok."'
 alias eal='vim $HOME/.bash_aliases_local; source $HOME/.bash_aliases_local && echo "bash_aliases_local sourced  --ok."'
 alias erc='vim ~/.bashrc; source $HOME/.bashrc && echo "bashrc sourced  --ok."'
-alias ezsh='vim $HOME/.config/zsh/.zshrc; source $HOME/.config/zsh/.zshrc && echo "zshrc sourced --ok."'
+alias ezrc='vim $HOME/.config/zsh/.zshrc; source $HOME/.config/zsh/.zshrc && echo "zshrc sourced --ok."'
 alias essh='vim ~/.ssh/config'
 alias evim='vim ~/.config/nvim/init.vim'
 
