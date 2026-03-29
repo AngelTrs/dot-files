@@ -12,7 +12,6 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'andymass/vim-matchup'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
-  Plug 'junegunn/fzf.vim'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
 call plug#end()

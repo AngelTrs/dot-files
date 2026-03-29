@@ -16,6 +16,7 @@ alias rm='rm -ir'
 
 alias mkdir='mkdir -pv'
 alias mktmp='cd $(mktemp -d)'
+
 function mkcd {
     mkdir -p $1
     cd $1
@@ -41,12 +42,35 @@ alias du='du -hs *'
 alias free='free -mh'
 
 # edit configs
-alias ea='vim $HOME/.bash_aliases; source $HOME/.bash_aliases && echo "bash_aliases sourced  --ok."'
-alias eal='vim $HOME/.bash_aliases_local; source $HOME/.bash_aliases_local && echo "bash_aliases_local sourced  --ok."'
-alias erc='vim ~/.bashrc; source $HOME/.bashrc && echo "bashrc sourced  --ok."'
+
+function ea {
+    vim "$HOME/.bash_aliases"
+    source "$HOME/.bash_aliases"
+    echo "bash_aliases sourced  --ok."
+}
+
+function eal {
+    vim "$HOME/.bash_aliases_local"
+    source "$HOME/.bash_aliases_local"
+    echo "bash_aliases_local sourced  --ok."
+}
+
+function erc {
+    vim "$HOME/.bashrc"
+    source "$HOME/.bashrc"
+    echo "bashrc sourced  --ok."
+}
+
 alias ezrc='vim $HOME/.config/zsh/.zshrc; source $HOME/.config/zsh/.zshrc && echo "zshrc sourced --ok."'
-alias essh='vim ~/.ssh/config'
-alias evim='vim ~/.config/nvim/init.vim'
+
+function ezrc {
+    vim "$HOME/.config/zsh/.zshrc"
+    source "$HOME/.config/zsh/.zshrc"
+    echo "zshrc sourced --ok."
+}
+
+alias essh="vim $HOME/ssh/config"
+alias evim="vim $HOME/.config/nvim/init.vim"
 
 alias vim='nvim'
 alias vimdiff='nvim -d'
@@ -65,7 +89,7 @@ alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'
 
 alias rcp='rsync -avhW --no-compress --progress'
 
-alias tmux='tmux -f ~/.config/tmux/tmux.conf'
+alias tmux="tmux -f $HOME/.config/tmux/tmux.conf"
 alias t='tmux new -A'
 alias tn='tmux new'
 alias tl='tmux ls'
@@ -87,6 +111,7 @@ alias dcu='docker-compose up -d'
 alias dcd='docker-compose down'
 alias dcl='docker-compose logs -f --tail 25'
 alias dcr='docker-compose restart'
+
 function dcupd {
     docker-compose pull
     docker-compose up -d --remove-orphans

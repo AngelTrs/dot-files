@@ -97,7 +97,7 @@ keys = [
         desc="Launch Rofi application launcher",
     ),
 
-    Key([mod], "Return", lazy.spawn(myTerminal), desc="Launch terminal"),
+    Key([mod], "t", lazy.spawn(myTerminal), desc="Launch terminal"),
     Key([mod], "f", lazy.spawn(myTerminal + " -e ranger"), desc="Launch file explorer"),
     Key([mod], "b", lazy.spawn(myBrowser), desc="Launch internet browser"),
     Key([mod], "e", lazy.spawn(myEmailClient), desc="Launch email client"),
